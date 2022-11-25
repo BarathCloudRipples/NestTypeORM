@@ -1,10 +1,7 @@
 module.exports = {
   'type': 'postgres',
-  'host': 'localhost',
-  'port': 5432,
-  'username': 'postgres',
-  'password': 'postgres',
-  'database': 'NestDatabase',
-  'entities': ['dist/**/**/*.entity{.js,.ts}'],
+  'url': process.env.DB_URL,
+  'entities': [process.env.ENTITY_PATH],
   'synchronize': true
 }
+
